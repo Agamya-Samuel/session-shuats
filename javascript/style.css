@@ -1,0 +1,34 @@
+#btn {
+	background-color: #6c63ff;
+	color: #fff;
+	border: none;
+	transition: transform 0.2s, background-color 0.3s;
+}
+
+#btn:hover {
+	background-color: #574bff;
+	transform: scale(1.1);
+}
+
+#btn:active {
+	transform: scale(0.95);
+}
+
+#container {
+	margin-top: 20px;
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: #f8f9fa;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+	margin-bottom: 10px;
+}
+
+.field span {
+	font-weight: bold;
+	color: #6c63ff;
+}

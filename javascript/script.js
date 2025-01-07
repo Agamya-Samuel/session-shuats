@@ -2,16 +2,15 @@ const btn = document.getElementById("btn");
 const container = document.getElementById("container");
 
 async function clickHandler() {
-	const data = await fetch("https://jsonplaceholder.typicode.com/posts/1")
-	const dataToJson = await data.json()
-	// console.log(dataToJson)
-	container.innerHTML = JSON.stringify(dataToJson)
-}
+	const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+	const data = await response.json();
+	const formattedData = `
+		<div class="field"><span>ID:</span> ${data.id}</div>
+		<div class="field"><span>Title:</span> ${data.title}</div>
+		<div class="field"><span>Body:</span> ${data.body}</div>
+	`;
 
-function mouseOutHandler() {
-	container.innerHTML = "";
+	container.innerHTML = formattedData;
 }
 
 btn.addEventListener("click", clickHandler);
-// btn.addEventListener("mouseover", clickHandler);
-// btn.addEventListener("mouseout", mouseOutHandler);
